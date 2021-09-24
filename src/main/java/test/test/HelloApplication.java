@@ -33,7 +33,9 @@ public class HelloApplication {
         if(FolderName.equals(NameFolder)== true) System.out.println(" \t\t"+FolderName);
             else
                 if(end!=1) System.out.println("├--"+FolderName);
-                else System.out.println("└--"+FolderName);
+                else
+                    if (Folders!=-1)System.out.println("└--"+FolderName);
+                    else System.out.println("├--"+FolderName);
         for(String s: CatalogList)
             if (s.equals(CatalogList.get(CatalogList.size()-1))) RecCat(Path+"\\"+s,Folders,t+1,s,1);
             else RecCat(Path+"\\"+s,Folders,t+1,s,0);
